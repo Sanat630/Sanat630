@@ -487,6 +487,12 @@
         margin: 0 auto;
         width: 90%;
     }
+    .heading{
+        margin-top: 13.5vh;
+    }
+    #name-section{
+        margin-bottom: -100px;
+    }
 }
 @media (max-width: 900px){
     .section{
