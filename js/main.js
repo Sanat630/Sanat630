@@ -22,7 +22,7 @@ function validate(){
     e.preventDefault();
     if (name.value == "" || email.value == "" || msg.value == "") {
       emptyerror();
-    } else if (email.value != "@gmail.com" & email.value != "@mail.ru") {
+    } else if (email.value != "" + "@gmail.com" & email.value != ""+"@mail.ru") {
       emptymailerrorr();
     } 
     else {
