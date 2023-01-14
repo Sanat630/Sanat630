@@ -22,10 +22,7 @@ function validate(){
     e.preventDefault();
     if (name.value == "" || email.value == "" || msg.value == "") {
       emptyerror();
-    } else if (email.value != /^\w+@\w+\.\w{2,4}$/i) {
-      emptymailerror();
-    } 
-    else {
+    } else {
       sendmail(name.value, email.value, msg.value);
       success();
     }
@@ -44,13 +41,6 @@ function sendmail(name,email,msg){
 function emptyerror() {
   swal({
     title: "Oh No...!",
-    text: "Wrong email address!",
-    icon: "error",
-  });
-}
-function emptymailerror() {
-  swal({
-    title: "Oh No..!",
     text: "Fields cannot be empty!",
     icon: "error",
   });
