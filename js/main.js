@@ -19,11 +19,10 @@ function validate(){
   let sendBtn = document.querySelector('.sendbtn')
 
   sendBtn.addEventListener('click', (e) => {
-    const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
     e.preventDefault();
     if (name.value == "" || email.value == "" || msg.value == "") {
       emptyerror();
-    } else if (email.value == EMAIL_REGEXP) {
+    } else if (email.value !== /^\w+@\w+\.\w{2,4}$/i) {
       emptymailerrorr();
     } 
     else {
