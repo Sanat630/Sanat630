@@ -23,7 +23,7 @@ function validate(){
     if (name.value == "" || email.value == "" || msg.value == "") {
       emptyerror();
     } else if (email.value != "@gmail.com" & email.value != "@mail.ru") {
-      error();
+      emptymailerrorr();
     } 
     else {
       sendmail(name.value, email.value, msg.value);
@@ -44,6 +44,13 @@ function sendmail(name,email,msg){
 function emptyerror() {
   swal({
     title: "Oh No...!",
+    text: "Wrong email address!",
+    icon: "error",
+  });
+}
+function emptymailerror() {
+  swal({
+    title: "Oh No..!",
     text: "Fields cannot be empty!",
     icon: "error",
   });
