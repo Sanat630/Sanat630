@@ -22,7 +22,7 @@ function validate(){
     e.preventDefault();
     if (name.value == "" || email.value == "" || msg.value == "") {
       emptyerror();
-    } else if (email.value !== /^\w+@\w+\.\w{2,4}$/i) {
+    } else if (email.value != /^\w+@\w+\.\w{2,4}$/i) {
       emptymailerror();
     } 
     else {
